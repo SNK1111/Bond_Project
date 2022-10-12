@@ -36,6 +36,7 @@ public class TestCase1 {
 		fis = new FileInputStream(src);
 		workbook = new XSSFWorkbook(fis);
 		sheet= workbook.getSheetAt(0);
+		
 
 		cell = sheet.getRow(1).getCell(0);
 		cell.setCellType(CellType.STRING);
@@ -67,6 +68,7 @@ public class TestCase1 {
 			cell.setCellType(CellType.STRING);
 			driver.findElement(By.xpath("//*[@id=\"email\"]")).clear();
 			driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(cell.getStringCellValue());
+			System.out.println("ABCD");
 
 
 			//Enter Password
