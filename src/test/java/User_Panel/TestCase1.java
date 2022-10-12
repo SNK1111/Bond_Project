@@ -70,7 +70,7 @@ public class TestCase1 {
 			driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(cell.getStringCellValue());
 			System.out.println("ABCD");
 			//ABCD
-
+//12345
 
 			//Enter Password
 			cell = sheet.getRow(i).getCell(2);
