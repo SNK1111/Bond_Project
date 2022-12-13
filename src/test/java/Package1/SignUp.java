@@ -88,6 +88,8 @@ public class SignUp {
    				driver.findElement(By.xpath("//*[@id=\"confirmPassword\"]")).clear();	         
    				driver.findElement(By.xpath("//*[@id=\"confirmPassword\"]")).sendKeys(cell.getStringCellValue());
    				
+   				//driver.findElement(By.xpath("//*[@id=\"country\"]")).click();
+   				
    			   //Click on country dropdown
    				cell = sheet.getRow(i).getCell(5);
  				cell.setCellType(CellType.STRING);
