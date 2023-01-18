@@ -59,15 +59,15 @@ public class SignIn {
    			for(int i=1; i<=sheet.getLastRowNum(); i++){  
    			
    				//Click on Sign IN button
-   				driver.findElement(By.xpath("//div[contains(text(),'User Sign In')]")).click();
-   				Thread.sleep(2000);
+//   				driver.findElement(By.xpath("//div[contains(text(),'User Sign In')]")).click();
+//   				Thread.sleep(2000);
    				
    			    //Enter Email ID
    				cell = sheet.getRow(i).getCell(1);
    				cell.setCellType(CellType.STRING);
-   				driver.findElement(By.xpath("//*[@id=\"email\"]")).clear();
-   				driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(cell.getStringCellValue());
-   				
+   				driver.findElement(By.xpath("//input[@id=\"email\"]")).clear();
+   				Thread.sleep(2000);
+   				driver.findElement(By.xpath("//input[@id=\"email\"]")).sendKeys(cell.getStringCellValue());
    				
    			    //Enter Password
    				cell = sheet.getRow(i).getCell(2);
@@ -97,7 +97,7 @@ public class SignIn {
    				//Click on Sign Out button
    				driver.findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
    				Thread.sleep(1000);
-   				break;
+   				//break;
    				
    			    //Click on Buy Token button
 //   				driver.findElement(By.xpath("//button[contains(text(),'Buy Token')]")).click();
